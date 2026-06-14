@@ -25,7 +25,7 @@ body {
   font-family: Quicksand, sans-serif;
   line-height: 1.6;
   color: #333;
-  /*background-color: var(--white-color);*/
+  background-color: black;
 }
 
 .container {
@@ -144,18 +144,19 @@ body {
 
 /* ===== HERO ===== */
 .hero {
-  height: 70vh;
+  height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   background:
     linear-gradient(
-      rgba(0,0,0,0.10),
-      rgba(0,0,0,0.10)
+      rgba(0,0,0,0.01),
+      rgba(0,0,0,0.01)
     ),
     url('images/The\ dope\ taupe\ 1.png')
-    center/cover; 
+    center no-repeat; 
+    background-size: contain;
   color: var(--primary-color);
 }
 
@@ -185,7 +186,7 @@ body {
   cursor: pointer;
   font-size: 0.9rem;
   display: block;
-  margin: 325px auto 0;
+  margin: 250px auto 0;
 }
 
 /* ========== ABOUT ========== */
