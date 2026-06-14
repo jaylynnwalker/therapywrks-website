@@ -264,28 +264,39 @@
 
     <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
       <input type="hidden" name="access_key" value="5a086540-3d3d-42bf-a084-aa5b7d093fe8">
+      
+    <!-- Optional: Can be type="hidden" or type="text" for subject -->
+    <input type="hidden" name="subject" value="New Patient Inquiry">
+  
+    <!-- Optional: From Name you want to see in the email
+          Default is "Notifications". you can overwrite here -->
+    <input type="hidden" name="from_name" value="TherapyWrks Website">
+
+    <!-- Required: if submitting without Javascript 
+         (because by default web3form outputs json) -->
+    <!-- If javascript, use "window.location.hash" for redirects -->
+    <input type="hidden" name="redirect" value="https://web3forms.com/success">
+
       <div class="form-group">
         <label for="name">Full Name</label>
-        <input type="text" id="name" required />
+        <input type="text" id="name" name="name" required />
       </div>
 
       <div class="form-group">
         <label for="email">Email Address</label>
-        <input type="email" id="email" required />
+        <input type="email" id="email" name="email" required />
       </div>
 
       <div class="form-group">
         <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" />
+        <input type="tel" id="phone" name="phone" />
       </div>
 
       <div class="form-group">
         <label for="message">How can we help?</label>
 
         <textarea
-          id="message"
-          rows="5"
-          required
+          id="message" name="message" rows="5" required
         ></textarea>
       </div>
 
