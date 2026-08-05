@@ -1,96 +1,61 @@
-// HAMBURGER MENU
-
-const hamburgerBtn =
-  document.getElementById("hamburgerBtn");
-
-const navMenu =
-  document.getElementById("navMenu");
-
-const navLinks =
-  document.querySelectorAll(".nav-menu a");
+const hamburgerBtn = document.getElementById("hamburgerBtn");
+const navMenu = document.getElementById("navMenu");
 
 hamburgerBtn.addEventListener("click", () => {
-  hamburgerBtn.classList.toggle("active");
-  navMenu.classList.toggle("active");
+  const isOpen = navMenu.classList.toggle("active");
+  hamburgerBtn.classList.toggle("active", isOpen);
+  hamburgerBtn.setAttribute("aria-expanded", isOpen);
 });
 
-// Close menu when a link is clicked
-navLinks.forEach((link) => {
+document.querySelectorAll(".nav-menu a").forEach((link) => {
   link.addEventListener("click", () => {
-    hamburgerBtn.classList.remove("active");
     navMenu.classList.remove("active");
+    hamburgerBtn.classList.remove("active");
+    hamburgerBtn.setAttribute("aria-expanded", "false");
   });
 });
 
-
-// CLIENT PORTAL LINK
-// Replace this URL later with your actual scheduling platform
-
-const clientPortalBtn =
-  document.getElementById("clientPortalBtn");
-
-clientPortalBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-
-  // Example placeholder
-  window.location.href =
-    "https://www.simplepractice.com";
-});
-
-
-// CONTACT FORM
-
-const contactForm =
-  document.getElementById("contactForm");
-
-const formMessage =
-  document.getElementById("formMessage");
-
-contactForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  const name =
-    document.getElementById("name").value;
-
-  const email =
-    document.getElementById("email").value;
-
-  console.log("New Client Inquiry:", {
-    name,
-    email
-  });
-
-  formMessage.textContent =
-    "Thank you. Your inquiry has been submitted.";
-
-  contactForm.reset();
-});
-
-// FAQ ACCORDION
-
-const faqQuestions =
-  document.querySelectorAll(".faq-question");
-
-faqQuestions.forEach((question) => {
-
+document.querySelectorAll(".faq-question").forEach((question) => {
   question.addEventListener("click", () => {
+    const item = question.closest(".faq-item");
+    const willOpen = !item.classList.contains("open");
 
-    const answer =
-      question.nextElementSibling;
+    document.querySelectorAll(".faq-item").forEach((faqItem) => {
+      faqItem.classList.remove("open");
+      faqItem.querySelector(".faq-question").setAttribute("aria-expanded", "false");
+    });
 
-    const isVisible =
-      answer.style.display === "block";
-
-    document
-      .querySelectorAll(".faq-answer")
-      .forEach((item) => {
-        item.style.display = "none";
-      });
-
-    if (!isVisible) {
-      answer.style.display = "block";
+    if (willOpen) {
+      item.classList.add("open");
+      question.setAttribute("aria-expanded", "true");
     }
-
   });
+});
 
+const contactForm = document.getElementById("contactForm");
+const formMessage = document.getElementById("formMessage");
+
+contactForm.addEventListener("submit", async (event) => {
+  event.preventDefault();
+  const submitButton = contactForm.querySelector("button[type='submit']");
+  submitButton.disabled = true;
+  submitButton.textContent = "Submitting...";
+  formMessage.textContent = "";
+
+  try {
+    const response = await fetch(contactForm.action, {
+      method: "POST",
+      body: new FormData(contactForm),
+      headers: { Accept: "application/json" }
+    });
+    const result = await response.json();
+    if (!response.ok || !result.success) throw new Error("Submission failed");
+    formMessage.textContent = "Thank you. Your inquiry has been submitted.";
+    contactForm.reset();
+  } catch (error) {
+    formMessage.textContent = "We couldn't submit your inquiry. Please try again shortly.";
+  } finally {
+    submitButton.disabled = false;
+    submitButton.textContent = "Submit Inquiry";
+  }
 });

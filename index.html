@@ -1,355 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TherapyWrks offers evidence-based therapy for individuals, couples, and families.">
   <title>TherapyWrks Counseling Services</title>
-  <link rel="stylesheet" href="style.css" />
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- Test -->
-  <!-- NAVBAR -->
   <header class="navbar" id="navbar">
     <div class="navbar-container">
-      <div class="logo">TherapyWrks</div>
+      <a class="logo" href="#hero" aria-label="TherapyWrks home">TherapyWrks</a>
 
-      <button class="hamburger" id="hamburgerBtn">
-        <span></span>
-        <span></span>
-        <span></span>
+      <button class="hamburger" id="hamburgerBtn" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
       </button>
+
+      <nav class="nav-menu" id="navMenu" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#bio">Counselor</a>
+        <a href="#faq">FAQ</a>
+        <a href="#blog">Blog</a>
+        <a class="portal-link" href="https://www.simplepractice.com" id="clientPortalBtn">Client Portal</a>
+        <a class="nav-cta" href="#contact">Request an Appointment</a>
+      </nav>
     </div>
-
-    <nav class="nav-menu" id="navMenu">
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-
-      <a
-        class="portal-btn"
-        href="#"
-        id="clientPortalBtn">Client Portal
-      </a>
-    </nav>
   </header>
 
-  <!-- HERO -->
-  <section class="hero" id="hero">
-    <div class="hero-content">
-
-      <a href="#contact" class="appointment-btn">
-        Request an Appointment
-      </a>
-
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section class="about" id="about">
-    <div class="about-container">
-      <h2>About the Practice</h2>
-
-      <p>
-        TherapyWrks offers evidence-based
-        therapy for anxiety, depression, stress management,
-        trauma, life transitions, and relationship challenges.
-      </p>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section class="services">
-    <div class="services-container">
-      <h2>Services</h2>
-
-      <div class="cards">
-        <div class="card">
-          <h3>Individual Therapy</h3>
-          <p>
-            Personalized support for emotional wellness,
-            stress, anxiety, and personal growth.
-          </p>
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">Counseling services for every season of life</p>
+          <h1>A safe place to grow.</h1>
+          <p>Evidence-based therapy for anxiety, depression, stress management, trauma, life transitions, and relationship challenges.</p>
+          <a href="#contact" class="primary-btn">Request an Appointment</a>
         </div>
-
-        <div class="card">
-          <h3>Couples Counseling</h3>
-          <p>
-            Strengthen communication, trust, and relationship dynamics.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Virtual Sessions</h3>
-          <p>
-            Secure online therapy sessions for convenience and accessibility.
-          </p>
+        <div class="hero-logo-wrap">
+          <img src="images/The dope taupe 1.png" alt="TherapyWrks — a safe place to grow" class="hero-logo">
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-<!-- COUNSELOR BIO -->
-<section class="bio" id="bio">
-  <div class="bio-container">
+    <section class="about section" id="about">
+      <div class="narrow-container centered">
+        <p class="eyebrow">Welcome to TherapyWrks</p>
+        <h2>About the Practice</h2>
+        <p class="lead">TherapyWrks offers evidence-based therapy for anxiety, depression, stress management, trauma, life transitions, and relationship challenges.</p>
+      </div>
+    </section>
 
-    <div class="bio-image">
-      <img
-        src="images/headshot.jpeg"
-        alt="Headshot of Thomala, Licensed Professional Counselor"
-      />
-    </div>
-
-    <div class="bio-content">
-      <h2>Meet Your Counselor</h2>
-
-      <p>
-        As a professional mental health counselor, Thomala brings over 20 years of experience helping parents, families, faculty and staff navigate personal, educational and career journeys. Her clinical experience is in psychotherapy, personal counseling, career planning/transitions with clients who are addressing anxiety, depression, addiction, family issues and social/emotional development concerns. She works with children, adolescents and adults using individual and group therapy. Her therapeutics strengths center is increasing self-awareness, acceptance of our emotional experiences and building a relationship with the inner Self.
-      </p>
-
-      <p>
-        Her approach integrates cognitive behavioral therapy,
-        mindfulness techniques, trauma-informed care, and
-        person-centered counseling to support emotional wellness
-        and long-term growth.
-      </p>
-
-      <p>
-        Areas of focus include anxiety, depression, burnout,
-        trauma recovery, relationship concerns, stress
-        management, and life transitions.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- INSURANCE -->
-<section class="insurance" id="insurance">
-  <div class="insurance-container">
-
-    <h2>Insurance Accepted</h2>
-
-    <div class="insurance-grid">
-
-      <div class="insurance-card">Blue Cross Blue Shield</div>
-      <div class="insurance-card">Aetna</div>
-      <div class="insurance-card">Cigna</div>
-      <div class="insurance-card">UnitedHealthcare</div>
-      <div class="insurance-card">Optum</div>
-      <div class="insurance-card">Self-Pay</div>
-
-    </div>
-
-    <p class="insurance-note">
-      Insurance coverage varies by plan. Please contact the
-      office to verify eligibility and benefits.
-    </p>
-
-  </div>
-</section>
-
-
-<!-- FAQ -->
-<section class="faq" id="faq">
-  <div class="faq-container">
-
-    <h2>Frequently Asked Questions</h2>
-
-    <div class="faq-container">
-
-      <div class="faq-item">
-        <button class="faq-question">
-          What should I expect during the first session?
-        </button>
-
-        <div class="faq-answer">
-          <p>
-            The first session focuses on getting to know you,
-            discussing your concerns, goals, and reviewing
-            relevant history to create a treatment plan.
-          </p>
+    <section class="services section" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">How we can help</p>
+          <h2>Services</h2>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <span class="card-number">01</span>
+            <h3>Individual Therapy</h3>
+            <p>Personalized support for emotional wellness, stress, anxiety, and personal growth.</p>
+          </article>
+          <article class="card">
+            <span class="card-number">02</span>
+            <h3>Couples Counseling</h3>
+            <p>Strengthen communication, trust, and relationship dynamics.</p>
+          </article>
+          <article class="card">
+            <span class="card-number">03</span>
+            <h3>Virtual Sessions</h3>
+            <p>Secure online therapy sessions for convenience and accessibility.</p>
+          </article>
         </div>
       </div>
+    </section>
 
-      <div class="faq-item">
-        <button class="faq-question">
-          Do you offer virtual appointments?
-        </button>
-
-        <div class="faq-answer">
-          <p>
-            Yes. Secure telehealth sessions are available for
-            clients located within eligible states.
-          </p>
+    <section class="bio section" id="bio">
+      <div class="container bio-container">
+        <div class="bio-image">
+          <div class="portrait-frame">
+            <img src="images/headshot.jpeg" alt="Thomala, Licensed Professional Counselor">
+          </div>
+        </div>
+        <div class="bio-content">
+          <p class="eyebrow">Compassionate, experienced care</p>
+          <h2>Meet Your Counselor</h2>
+          <p>As a professional mental health counselor, Thomala brings over 20 years of experience helping parents, families, faculty and staff navigate personal, educational and career journeys. Her clinical experience is in psychotherapy, personal counseling, career planning/transitions with clients who are addressing anxiety, depression, addiction, family issues and social/emotional development concerns. She works with children, adolescents and adults using individual and group therapy. Her therapeutics strengths center is increasing self-awareness, acceptance of our emotional experiences and building a relationship with the inner Self.</p>
+          <p>Her approach integrates cognitive behavioral therapy, mindfulness techniques, trauma-informed care, and person-centered counseling to support emotional wellness and long-term growth.</p>
+          <p>Areas of focus include anxiety, depression, burnout, trauma recovery, relationship concerns, stress management, and life transitions.</p>
+          <a href="#contact" class="text-link">Start a conversation <span aria-hidden="true">→</span></a>
         </div>
       </div>
+    </section>
 
-      <div class="faq-item">
-        <button class="faq-question">
-          How long are therapy sessions?
-        </button>
+    <section class="insurance section" id="insurance">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Making care accessible</p>
+          <h2>Insurance Accepted</h2>
+        </div>
+        <div class="insurance-grid">
+          <div class="insurance-card">Blue Cross Blue Shield</div>
+          <div class="insurance-card">Aetna</div>
+          <div class="insurance-card">Cigna</div>
+          <div class="insurance-card">UnitedHealthcare</div>
+          <div class="insurance-card">Optum</div>
+          <div class="insurance-card">Self-Pay</div>
+        </div>
+        <p class="insurance-note">Insurance coverage varies by plan. Please contact the office to verify eligibility and benefits.</p>
+      </div>
+    </section>
 
-        <div class="faq-answer">
-          <p>
-            Standard sessions are approximately 50 minutes.
-          </p>
+    <section class="faq section" id="faq">
+      <div class="narrow-container">
+        <div class="section-heading">
+          <p class="eyebrow">What to know</p>
+          <h2>Frequently Asked Questions</h2>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">What should I expect during the first session?<span aria-hidden="true">+</span></button>
+            <div class="faq-answer"><p>The first session focuses on getting to know you, discussing your concerns, goals, and reviewing relevant history to create a treatment plan.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">Do you offer virtual appointments?<span aria-hidden="true">+</span></button>
+            <div class="faq-answer"><p>Yes. Secure telehealth sessions are available for clients located within eligible states.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">How long are therapy sessions?<span aria-hidden="true">+</span></button>
+            <div class="faq-answer"><p>Standard sessions are approximately 50 minutes.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">What is your cancellation policy?<span aria-hidden="true">+</span></button>
+            <div class="faq-answer"><p>We request at least 24 hours notice for cancellations or rescheduling.</p></div>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="faq-item">
-        <button class="faq-question">
-          What is your cancellation policy?
-        </button>
-
-        <div class="faq-answer">
-          <p>
-            We request at least 24 hours notice for cancellations
-            or rescheduling.
-          </p>
+    <section class="blog section" id="blog">
+      <div class="container">
+        <div class="section-heading split-heading">
+          <div><p class="eyebrow">Resources and reflections</p><h2>From the Blog</h2></div>
+          <p>Thoughtful guidance to support emotional wellness in everyday life.</p>
+        </div>
+        <div class="blog-grid">
+          <article class="blog-card"><p class="blog-topic">Emotional Wellness</p><h3>Blog post title coming soon</h3><p>Helpful insights and practical tools from TherapyWrks will be shared here.</p><span class="text-link">Coming soon</span></article>
+          <article class="blog-card"><p class="blog-topic">Relationships</p><h3>Blog post title coming soon</h3><p>Helpful insights and practical tools from TherapyWrks will be shared here.</p><span class="text-link">Coming soon</span></article>
+          <article class="blog-card"><p class="blog-topic">Personal Growth</p><h3>Blog post title coming soon</h3><p>Helpful insights and practical tools from TherapyWrks will be shared here.</p><span class="text-link">Coming soon</span></article>
         </div>
       </div>
+    </section>
 
-    </div>
-
-  </div>
-</section>
-
-
-
-<!-- CRISIS RESOURCES -->
-<section class="crisis" id="crisis">
-  <div class="crisis-container">
-
-    <h2>Crisis Resources</h2>
-
-    <div class="crisis-card">
-
-      <p>
-        If you are experiencing a mental health emergency,
-        call 911 or go to your nearest emergency room.
-      </p>
-
-      <ul>
-        <li>
-          988 Suicide & Crisis Lifeline — Call or Text 988
-        </li>
-
-        <li>
-          Crisis Text Line — Text HOME to 741741
-        </li>
-
-        <li>
-          Emergency Services — Dial 911
-        </li>
-      </ul>
-
-      <p class="crisis-small">
-        This practice does not provide emergency or crisis services.
-      </p>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- CONTACT FORM -->
-<section id="contact" class="contact">
-  <div class="contact-container">
-    <h2>New Client Inquiry</h2>
-
-    <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-      <input type="hidden" name="access_key" value="5a086540-3d3d-42bf-a084-aa5b7d093fe8">
-      
-    <!-- Optional: Can be type="hidden" or type="text" for subject -->
-    <input type="hidden" name="subject" value="New Patient Inquiry">
-  
-    <!-- Optional: From Name you want to see in the email
-          Default is "Notifications". you can overwrite here -->
-    <input type="hidden" name="from_name" value="TherapyWrks Website">
-
-    <!-- Required: if submitting without Javascript 
-         (because by default web3form outputs json) -->
-    <!-- If javascript, use "window.location.hash" for redirects -->
-    <input type="hidden" name="redirect" value="https://web3forms.com/success">
-
-      <div class="form-group">
-        <label for="name">Full Name</label>
-        <input type="text" id="name" name="name" required />
+    <section class="contact section" id="contact">
+      <div class="container contact-layout">
+        <div class="contact-intro">
+          <p class="eyebrow">Take the next step</p>
+          <h2>New Client Inquiry</h2>
+          <p>Complete the form to request an appointment. Please do not include private medical or sensitive personal information.</p>
+          <div class="crisis-note">
+            <h3>Need immediate help?</h3>
+            <p>If you are experiencing a mental health emergency, call 911 or go to your nearest emergency room.</p>
+            <p>988 Suicide &amp; Crisis Lifeline — Call or Text 988<br>Crisis Text Line — Text HOME to 741741</p>
+            <small>This practice does not provide emergency or crisis services.</small>
+          </div>
+        </div>
+        <form id="contactForm" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="5a086540-3d3d-42bf-a084-aa5b7d093fe8">
+          <input type="hidden" name="subject" value="New Patient Inquiry">
+          <input type="hidden" name="from_name" value="TherapyWrks Website">
+          <input type="checkbox" name="botcheck" class="hidden" tabindex="-1" autocomplete="off">
+          <div class="form-group"><label for="name">Full Name</label><input type="text" id="name" name="name" autocomplete="name" required></div>
+          <div class="form-row">
+            <div class="form-group"><label for="email">Email Address</label><input type="email" id="email" name="email" autocomplete="email" required></div>
+            <div class="form-group"><label for="phone">Phone Number</label><input type="tel" id="phone" name="phone" autocomplete="tel"></div>
+          </div>
+          <div class="form-group"><label for="message">How can we help?</label><textarea id="message" name="message" rows="5" required></textarea></div>
+          <button type="submit" class="primary-btn">Submit Inquiry</button>
+          <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
+        </form>
       </div>
+    </section>
+  </main>
 
-      <div class="form-group">
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" required />
-      </div>
-
-      <div class="form-group">
-        <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" name="phone" />
-      </div>
-
-      <div class="form-group">
-        <label for="message">How can we help?</label>
-
-        <textarea
-          id="message" name="message" rows="5" required
-        ></textarea>
-      </div>
-
-      <button type="submit" class="primary-btn">
-        Submit Inquiry
-      </button>
-
-      </form>
-
-      <p id="formMessage"></p>
-    </div>
-  </section>
-
-  <!-- INTAKE PAPERWORK -->
-<!-- <section class="intake" id="intake">
-  <div class="intake-container">
-
-    <h2>New Client Forms</h2>
-
-    <div class="paperwork-grid">
-
-      <a href="#" class="paperwork-card">
-        Intake Questionnaire
-      </a>
-
-      <a href="#" class="paperwork-card">
-        Telehealth Consent Form
-      </a>
-
-      <a href="#" class="paperwork-card">
-        HIPAA Privacy Notice
-      </a>
-
-      <a href="#" class="paperwork-card">
-        Financial Policy
-      </a>
-
-    </div>
-
-    <p class="paperwork-note">
-      Forms can be completed prior to your first appointment.
-    </p>
-
-  </div> -->
-</section>
-  
-  <!-- FOOTER -->
   <footer class="footer">
-    <p>
-      © 2026 TherapyWrks. All rights reserved.
-    </p>
+    <div class="container footer-inner"><a class="footer-logo" href="#hero">TherapyWrks</a><p>A safe place to grow.</p><p>© 2026 TherapyWrks. All rights reserved.</p></div>
   </footer>
-
   <script src="app.js"></script>
 </body>
 </html>
